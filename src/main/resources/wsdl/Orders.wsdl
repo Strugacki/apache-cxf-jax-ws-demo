@@ -11,10 +11,16 @@
   <wsdl:message name="ProcessOrderPlacementResponse">
     <wsdl:part element="order:orderInquiryResponse" name="orderInquiryResponse"/>
   </wsdl:message>
+  <!-- FAULT MESSAGE DECLARATION -->
+  <wsdl:message name="ProcessOrderPlacementError">
+  	<wsdl:part element="order:errorHandler" name="fault" />
+  </wsdl:message>
+  <!-- END -->
   <wsdl:portType name="Orders">
     <wsdl:operation name="ProcessOrderPlacement">
       <wsdl:input message="tns:ProcessOrderPlacementRequest"/>
       <wsdl:output message="tns:ProcessOrderPlacementResponse"/>
+      <wsdl:fault name="ProcessOrderPlacementError" message="tns:ProcessOrderPlacementError" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="OrdersSOAP" type="tns:Orders">
@@ -27,6 +33,10 @@
       <wsdl:output>
         <soap:body use="literal"/>
       </wsdl:output>
+      <!-- FAULT MESSAGE ATTACHED TO OPERATION -->
+      <wsdl:fault name ="ProcessOrderPlacementError">
+      	<soap:fault name ="ProcessOrderPlacementError" use="literal"/>
+      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Orders">

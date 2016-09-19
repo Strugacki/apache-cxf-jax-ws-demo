@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="responseHeader" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="responseBody" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="responseDetail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,13 +31,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ErrorHandlerType", propOrder = {
     "responseHeader",
-    "responseBody"
+    "responseBody",
+    "responseDetail"
 })
 public class ErrorHandlerType {
 
     protected long responseHeader;
     @XmlElement(required = true)
     protected String responseBody;
+    protected String responseDetail;
 
     /**
      * Gets the value of the responseHeader property.
@@ -76,6 +79,30 @@ public class ErrorHandlerType {
      */
     public void setResponseBody(String value) {
         this.responseBody = value;
+    }
+
+    /**
+     * Gets the value of the responseDetail property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getResponseDetail() {
+        return responseDetail;
+    }
+
+    /**
+     * Sets the value of the responseDetail property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setResponseDetail(String value) {
+        this.responseDetail = value;
     }
 
 }

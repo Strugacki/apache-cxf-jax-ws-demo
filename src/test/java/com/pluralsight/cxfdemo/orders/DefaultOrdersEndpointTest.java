@@ -15,6 +15,7 @@ import com.pluralsight.schema.order.ObjectFactory;
 import com.pluralsight.schema.order.OrderInquiryResponseType;
 import com.pluralsight.schema.order.OrderInquiryType;
 import com.pluralsight.service.orders.Orders;
+import com.pluralsight.service.orders.ProcessOrderPlacementError;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:test-beans.xml"})
@@ -42,7 +43,7 @@ public class DefaultOrdersEndpointTest {
 	}
 
 	@Test
-	public void testProcessOrderPlacementSuccess() {
+	public void testProcessOrderPlacementSuccess() throws ProcessOrderPlacementError {
 		OrderInquiryResponseType response = ordersService.processOrderPlacement(orderInquiryType);
 		assertTrue(response.getAccount().getAccountId() == 999);
 	}

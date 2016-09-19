@@ -30,16 +30,17 @@
         	</jaxws:inInterceptors>
         	<jaxws:outInterceptors>
         		<ref bean="loggingOutInterceptor"/>
+        		<ref bean="orderServiceSoapHeaderOutInterceptor" />
         	</jaxws:outInterceptors>
         	<jaxws:outFaultInterceptors>
-        		<ref bean="osredServiceSoapOutFaultInterceptor"/>
+        		<ref bean="orderServiceSoapOutFaultInterceptor"/>
         	</jaxws:outFaultInterceptors>  
         </jaxws:endpoint>
           
         <!-- MY CUSTOM BEANS -->  
 		<bean name="orderServiceSoapHeaderInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrderServiceSoapHeaderInterceptor"></bean>
-        <bean name="osredServiceSoapOutFaultInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrdersServiceSoapOutFaultInterceptor"></bean>  
-        
+        <bean name="orderServiceSoapOutFaultInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrdersServiceSoapOutFaultInterceptor"></bean>  
+        <bean name="orderServiceSoapHeaderOutInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrderServiceSoapHeaderOutInterceptor2"></bean>
         
         <!-- LOGGING BEANS -->
         <bean id="loggingInInterceptor" class="org.apache.cxf.interceptor.LoggingInInterceptor" >
