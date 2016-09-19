@@ -25,22 +25,14 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _OrderInquiryResponse_QNAME = new QName("http://www.pluralsight.com/schema/Order", "orderInquiryResponse");
-    private final static QName _ErrorHandler_QNAME = new QName("http://www.pluralsight.com/schema/Order", "errorHandler");
     private final static QName _OrderInquiry_QNAME = new QName("http://www.pluralsight.com/schema/Order", "orderInquiry");
+    private final static QName _ErrorHandler_QNAME = new QName("http://www.pluralsight.com/schema/Order", "errorHandler");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.pluralsight.schema.order
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link ErrorHandlerType }
-     * 
-     */
-    public ErrorHandlerType createErrorHandlerType() {
-        return new ErrorHandlerType();
     }
 
     /**
@@ -60,11 +52,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AccountType }
+     * Create an instance of {@link ErrorHandlerType }
      * 
      */
-    public AccountType createAccountType() {
-        return new AccountType();
+    public ErrorHandlerType createErrorHandlerType() {
+        return new ErrorHandlerType();
     }
 
     /**
@@ -76,6 +68,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link BookType }
+     * 
+     */
+    public BookType createBookType() {
+        return new BookType();
+    }
+
+    /**
      * Create an instance of {@link OrderItemType }
      * 
      */
@@ -84,11 +84,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BookType }
+     * Create an instance of {@link AccountType }
      * 
      */
-    public BookType createBookType() {
-        return new BookType();
+    public AccountType createAccountType() {
+        return new AccountType();
     }
 
     /**
@@ -101,21 +101,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ErrorHandlerType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.pluralsight.com/schema/Order", name = "errorHandler")
-    public JAXBElement<ErrorHandlerType> createErrorHandler(ErrorHandlerType value) {
-        return new JAXBElement<ErrorHandlerType>(_ErrorHandler_QNAME, ErrorHandlerType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OrderInquiryType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.pluralsight.com/schema/Order", name = "orderInquiry")
     public JAXBElement<OrderInquiryType> createOrderInquiry(OrderInquiryType value) {
         return new JAXBElement<OrderInquiryType>(_OrderInquiry_QNAME, OrderInquiryType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ErrorHandlerType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.pluralsight.com/schema/Order", name = "errorHandler")
+    public JAXBElement<ErrorHandlerType> createErrorHandler(ErrorHandlerType value) {
+        return new JAXBElement<ErrorHandlerType>(_ErrorHandler_QNAME, ErrorHandlerType.class, null, value);
     }
 
 }

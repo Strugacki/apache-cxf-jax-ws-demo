@@ -43,12 +43,12 @@
         <bean id="loggingInInterceptor" class="org.apache.cxf.interceptor.LoggingInInterceptor" />
         <bean id="loggingOutInterceptor" class="org.apache.cxf.interceptor.LoggingOutInterceptor" />
           
-       	<bean id="orderServiceSoapHeaderInterceptor" class="com.pluralsight.cxfdemo.orders.OrderServiceSoapHeaderInterceptor" />
-        <bean id="orderServiceSoapHeaderOutInterceptor" class="com.pluralsight.cxfdemo.orders.OrderServiceSoapHeaderOutInterceptor" />
-        <bean id="orderServiceSoapHeaderInterceptor2" class="com.pluralsight.cxfdemo.orders.OrderServiceSoapHeaderInterceptor2" />
-        <bean id="orderServiceSoapHeaderOutInterceptor2" class="com.pluralsight.cxfdemo.orders.OrderServiceSoapHeaderOutInterceptor2" />
-        <bean id="orderServiceSoapInFaultInterceptor" class="com.pluralsight.cxfdemo.orders.OrderServiceSoapInFaultInterceptor" />
-        <bean id="orderServiceSoapOutFaultInterceptor" class="com.pluralsight.cxfdemo.orders.OrdersServiceSoapOutFaultInterceptor" />
+       	<bean id="orderServiceSoapHeaderInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrderServiceSoapHeaderInterceptor" />
+        <bean id="orderServiceSoapHeaderOutInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrderServiceSoapHeaderOutInterceptor" />
+        <bean id="orderServiceSoapHeaderInterceptor2" class="com.pluralsight.cxfdemo.interceptor.OrderServiceSoapHeaderInterceptor2" />
+        <bean id="orderServiceSoapHeaderOutInterceptor2" class="com.pluralsight.cxfdemo.interceptor.OrderServiceSoapHeaderOutInterceptor2" />
+        <bean id="orderServiceSoapInFaultInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrderServiceSoapInFaultInterceptor" />
+        <bean id="orderServiceSoapOutFaultInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrdersServiceSoapOutFaultInterceptor" />
         <jaxws:client 
         	id="testOrdersClient"
         	address="http://localhost:9000/apache-cxf-jax-ws-demo/services/orders"

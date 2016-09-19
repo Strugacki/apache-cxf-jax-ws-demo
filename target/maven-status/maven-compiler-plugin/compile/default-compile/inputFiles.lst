@@ -1,7 +1,5 @@
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\OrderInquiryResponseType.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\orders\DefaultOrdersEndpoint.java
-D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\orders\OrderServiceSoapHeaderInterceptor.java
-D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\intercpetor\SOAPHandler.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\ObjectFactory.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\OrderStatusType.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\OrderInquiryType.java
@@ -9,12 +7,17 @@ D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cx
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\AccountType.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\OrderItemType.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\service\orders\Orders.java
+D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\interceptor\OrderServiceSoapHeaderInterceptor2.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\HelloWorldImpl.java
-D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\orders\OrderServiceSoapHeaderOutInterceptor.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\orders\OrderServiceImpl.java
+D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\interceptor\OrderServiceSoapHeaderInterceptor.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\OrderType.java
+D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\interceptor\OrderServiceSoapHeaderOutInterceptor.java
+D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\interceptor\OrdersServiceSoapOutFaultInterceptor.java
+D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\interceptor\OrderServiceSoapInFaultInterceptor.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\HelloWorld.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\BookType.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\ErrorHandlerType.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\service\orders\Orders_Service.java
 D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java-generated\com\pluralsight\schema\order\package-info.java
+D:\programming\workspace\apache-cxf-jax-ws-demo\src\main\java\com\pluralsight\cxfdemo\interceptor\OrderServiceSoapHeaderOutInterceptor2.java

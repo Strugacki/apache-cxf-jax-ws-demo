@@ -25,12 +25,28 @@
         implementor="com.pluralsight.cxfdemo.orders.DefaultOrdersEndpoint"
         address="/services/orders" >
         	<jaxws:inInterceptors>
+        		<ref bean="loggingInInterceptor"/>
         		<ref bean="orderServiceSoapHeaderInterceptor"/>
-        	</jaxws:inInterceptors>  
+        	</jaxws:inInterceptors>
+        	<jaxws:outInterceptors>
+        		<ref bean="loggingOutInterceptor"/>
+        	</jaxws:outInterceptors>
+        	<jaxws:outFaultInterceptors>
+        		<ref bean="osredServiceSoapOutFaultInterceptor"/>
+        	</jaxws:outFaultInterceptors>  
         </jaxws:endpoint>
           
-          
-		<bean name="orderServiceSoapHeaderInterceptor" class="com.pluralsight.cxfdemo.orders.OrderServiceSoapHeaderInterceptor"></bean>
-          
+        <!-- MY CUSTOM BEANS -->  
+		<bean name="orderServiceSoapHeaderInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrderServiceSoapHeaderInterceptor"></bean>
+        <bean name="osredServiceSoapOutFaultInterceptor" class="com.pluralsight.cxfdemo.interceptor.OrdersServiceSoapOutFaultInterceptor"></bean>  
+        
+        
+        <!-- LOGGING BEANS -->
+        <bean id="loggingInInterceptor" class="org.apache.cxf.interceptor.LoggingInInterceptor" >
+        	<property name="prettyLogging" value="true" /> <!-- XML Output formatting  -->
+        </bean>
+        <bean id="loggingOutInterceptor" class="org.apache.cxf.interceptor.LoggingOutInterceptor" >
+        	<property name="prettyLogging" value="true" /> <!-- XML Output formatting  -->
+        </bean>
        
 </beans>
