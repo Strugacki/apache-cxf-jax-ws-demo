@@ -17,12 +17,13 @@ import com.pluralsight.schema.order.OrderInquiryResponseType;
 import com.pluralsight.schema.order.OrderItemType;
 import com.pluralsight.schema.order.OrderStatusType;
 import com.pluralsight.schema.order.OrderType;
+import com.pluralsight.service.orders.ProcessOrderPlacementError;
 
 @Service
 public class OrderServiceImpl implements OrdersService {
 
 	@Override
-	public OrderInquiryResponseType processOrder(int uniqueOrderId, int orderQuantity, int accountId, long ean13) throws Fault {
+	public OrderInquiryResponseType processOrder(int uniqueOrderId, int orderQuantity, int accountId, long ean13) throws ProcessOrderPlacementError {
 		ObjectFactory factory = new ObjectFactory();
 		OrderInquiryResponseType response = factory.createOrderInquiryResponseType();
 		AccountType account = factory.createAccountType();

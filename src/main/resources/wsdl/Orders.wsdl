@@ -13,7 +13,7 @@
   </wsdl:message>
   <!-- FAULT MESSAGE DECLARATION -->
   <wsdl:message name="ProcessOrderPlacementError">
-  	<wsdl:part element="order:errorHandler" name="fault" />
+  	<wsdl:part element="order:ProcessOrderPlacementError" name="fault" />
   </wsdl:message>
   <!-- END -->
   <wsdl:portType name="Orders">

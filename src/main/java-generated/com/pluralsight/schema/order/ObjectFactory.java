@@ -26,6 +26,7 @@ public class ObjectFactory {
 
     private final static QName _OrderInquiryResponse_QNAME = new QName("http://www.pluralsight.com/schema/Order", "orderInquiryResponse");
     private final static QName _ErrorHandler_QNAME = new QName("http://www.pluralsight.com/schema/Order", "errorHandler");
+    private final static QName _ProcessOrderPlacementError_QNAME = new QName("http://www.pluralsight.com/schema/Order", "ProcessOrderPlacementError");
     private final static QName _OrderInquiry_QNAME = new QName("http://www.pluralsight.com/schema/Order", "orderInquiry");
 
     /**
@@ -33,22 +34,6 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link AccountType }
-     * 
-     */
-    public AccountType createAccountType() {
-        return new AccountType();
-    }
-
-    /**
-     * Create an instance of {@link OrderType }
-     * 
-     */
-    public OrderType createOrderType() {
-        return new OrderType();
     }
 
     /**
@@ -60,19 +45,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BookType }
+     * Create an instance of {@link AccountType }
      * 
      */
-    public BookType createBookType() {
-        return new BookType();
-    }
-
-    /**
-     * Create an instance of {@link OrderInquiryType }
-     * 
-     */
-    public OrderInquiryType createOrderInquiryType() {
-        return new OrderInquiryType();
+    public AccountType createAccountType() {
+        return new AccountType();
     }
 
     /**
@@ -84,11 +61,43 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link OrderType }
+     * 
+     */
+    public OrderType createOrderType() {
+        return new OrderType();
+    }
+
+    /**
+     * Create an instance of {@link BookType }
+     * 
+     */
+    public BookType createBookType() {
+        return new BookType();
+    }
+
+    /**
      * Create an instance of {@link OrderItemType }
      * 
      */
     public OrderItemType createOrderItemType() {
         return new OrderItemType();
+    }
+
+    /**
+     * Create an instance of {@link ProcessOrderPlacementError }
+     * 
+     */
+    public ProcessOrderPlacementError createProcessOrderPlacementError() {
+        return new ProcessOrderPlacementError();
+    }
+
+    /**
+     * Create an instance of {@link OrderInquiryType }
+     * 
+     */
+    public OrderInquiryType createOrderInquiryType() {
+        return new OrderInquiryType();
     }
 
     /**
@@ -107,6 +116,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.pluralsight.com/schema/Order", name = "errorHandler")
     public JAXBElement<ErrorHandlerType> createErrorHandler(ErrorHandlerType value) {
         return new JAXBElement<ErrorHandlerType>(_ErrorHandler_QNAME, ErrorHandlerType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ProcessOrderPlacementError }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.pluralsight.com/schema/Order", name = "ProcessOrderPlacementError")
+    public JAXBElement<ProcessOrderPlacementError> createProcessOrderPlacementError(ProcessOrderPlacementError value) {
+        return new JAXBElement<ProcessOrderPlacementError>(_ProcessOrderPlacementError_QNAME, ProcessOrderPlacementError.class, null, value);
     }
 
     /**

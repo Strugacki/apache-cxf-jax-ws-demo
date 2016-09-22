@@ -33,6 +33,7 @@
         		<ref bean="orderServiceSoapHeaderOutInterceptor" />
         	</jaxws:outInterceptors>
         	<jaxws:outFaultInterceptors>
+        		<ref bean="loggingOutInterceptor"/>
         		<ref bean="orderServiceSoapOutFaultInterceptor"/>
         	</jaxws:outFaultInterceptors>  
         </jaxws:endpoint>
